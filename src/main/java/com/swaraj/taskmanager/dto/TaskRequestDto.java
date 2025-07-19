@@ -15,6 +15,7 @@ public class TaskRequestDto {
     @Size(min = 3,message = "Title must be at least 3 characters ")
     private String title;
 
+    @NotBlank(message = "Description must not be blank")
     private String description;
 
     @NotNull(message = "Status is required")
@@ -23,6 +24,7 @@ public class TaskRequestDto {
     @NotNull(message = "Priority is required")
     private Priority priority;
 
+    @NotNull(message = "DueDate is required")
     private LocalDateTime dueDate;
 
     public String getTitle() {
